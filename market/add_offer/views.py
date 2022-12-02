@@ -26,9 +26,9 @@ def add_offer(request):
     return render(request, 'add_offer/offers_adding.html', {'form': form})
 
 
-
-
-
+def show_offers(request):
+    catalog = Offer.objects.all()
+    return render(request, 'add_offer/show_offers.html', {'catalog': catalog})
 
 
 

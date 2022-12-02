@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'main',
     'registration',
     'add_offer',
+    'catalog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

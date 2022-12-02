@@ -1,0 +1,24 @@
+{% extends 'main/layout.html'%}
+{% load static %}
+
+{% block content %}
+    <div class="features" >
+    <h1>КАТАЛОГ</h1>
+    {% if catalog %}
+        {% for i in catalog %}
+            <div class="alert alert-dark">
+                <h3>{{ i.name }}</h3>
+                <p>{{ i.description }}</p>
+                <p2>{{ i.price }}$</p2>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>Записи отсутсвуют(</p>
+        {% endif %}
+    </div>
+{% endblock %}
+
+
+{% block title %}
+    Каталог
+{% endblock %}

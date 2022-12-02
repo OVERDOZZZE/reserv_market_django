@@ -4,9 +4,9 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 
-
 urlpatterns = [
-    path('', views.add_offer)
+    path('', views.show_offers),
+    path('add_offers', views.add_offer, name='add_offers')
 ]
 
 if settings.DEBUG:

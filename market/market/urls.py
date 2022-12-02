@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('registration/', include('registration.urls')),
-    path('add_offer/', include('add_offer.urls'))
+    # path('add_offer/', include('add_offer.urls')),
+    path('show_offers/', include('add_offer.urls'))
 ] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
