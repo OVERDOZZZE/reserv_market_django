@@ -16,7 +16,7 @@ def create_registration(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('catalog')
+            return redirect('offer')
         else:
             error = 'Форма была неверной'
 
