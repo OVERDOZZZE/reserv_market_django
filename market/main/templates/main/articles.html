@@ -1,0 +1,25 @@
+{% extends 'main/layout.html'%}
+{% load static %}
+
+{% block content %}
+    <div class="features" >
+    <h1>КАТАЛОГ</h1>
+    {% if articles %}
+        {% for i in articles %}
+            <div class="alert alert-dark">
+                <h3>{{ i.title }}</h3>
+                <p>{{ i.description }}</p>
+<!--                <p2>{{ i.image }}</p2>-->
+
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>Записи отсутсвуют(</p>
+        {% endif %}
+    </div>
+{% endblock %}
+
+
+{% block title %}
+    Каталог
+{% endblock %}
